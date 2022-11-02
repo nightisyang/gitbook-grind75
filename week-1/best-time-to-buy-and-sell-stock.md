@@ -25,12 +25,13 @@
 ### Pseudocode
 
 {% code overflow="wrap" %}
-```
+```markdown
 the most profitable strategy is to, buy at the lowest price and sell at the highest price.
 
 - loop through array and
     - find lowest price
-    - find highest price that is after index of lower price
+    ~- find highest price that is after index of lower price~
+    - find the highest profit
 ```
 {% endcode %}
 
@@ -51,17 +52,16 @@ var maxProfit = function (prices) {
 
   return maxProfit;
 };
-
 ```
 
 ### Time and Space Complexity
 
 #### Time
 
-* What did the code do
-* Total -
+* Loop through the array once O(N)
+* Total - O(N)
 
 #### Space
 
-* What did the code do
-* Total -
+* Storing lowest price and max profit O(1)
+* Total - O(1)

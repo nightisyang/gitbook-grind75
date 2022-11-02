@@ -1,5 +1,7 @@
 # Copy of Template
 
+{% embed url="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" %}
+
 ### Problem
 
 > Insert problem statement

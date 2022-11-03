@@ -1,6 +1,6 @@
 # Table of contents
 
-- [week-1](README.md)
+- [week-1](week-1/README.md)
   - [Two Sum](week-1/two-sum.md)
   - [Valid Parentheses](week-1/valid-parentheses.md)
   - [Merge Two Sorted Lists](week-1/merge-two-sorted-lists.md)

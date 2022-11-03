@@ -19,7 +19,7 @@ const interval = [13, 12, 8, 8, 8, 9, 7, 10];
 let count = 0;
 let index = 0;
 let weekNum = week[0];
-console.log(`- [${weekNum}](README.md)`);
+console.log(`* [${weekNum}](README.md)`);
 jsonArr.forEach((obj) => {
   const [element] = Object.entries(obj);
   const [key, value] = element;
@@ -30,10 +30,10 @@ jsonArr.forEach((obj) => {
   if (count === interval[index] + 1) {
     index++;
     weekNum = week[index];
-    console.log(`- [${weekNum}](README.md)`);
+    console.log(`* [${weekNum}](${weekNum}/README.md)`);
     count = 1;
   }
 
-  console.log(`  - [${key}](${weekNum}/${filename}.md)`);
+  console.log(`  * [${key}](${weekNum}/${filename}.md)`);
 });
 // console.log(count);

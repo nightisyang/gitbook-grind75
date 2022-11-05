@@ -4,42 +4,28 @@
 
 ### Problem
 
-> Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
->
-> The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
->
-> You must write an algorithm that runs in `O(n)` time and without using the division operation.
->
-> &#x20;
->
-> **Example 1:**
->
-> <pre><code>Input: nums = [1,2,3,4]
-> <strong>Output: [24,12,8,6]</strong></code></pre>
->
-> **Example 2:**
->
-> <pre><code>Input: nums = [-1,1,0,-3,3]
-> <strong>Output: [0,0,9,0,0]</strong></code></pre>
+> Insert problem statement
 
 ### Pseudocode
 
-```
+```// Some code
+
 ```
 
 ### Solution
 
-```
+```// Some code
+
 ```
 
 ### Time and Space Complexity
 
 #### Time
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -&#x20;
 
 #### Space
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -

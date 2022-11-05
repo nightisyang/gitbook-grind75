@@ -4,45 +4,28 @@
 
 ### Problem
 
-> Given the `root` of a binary tree, return _the level order traversal of its nodes' values_. (i.e., from left to right, level by level).
->
-> &#x20;
->
-> **Example 1:**
->
-> ![](https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg)
->
-> <pre><code>Input: root = [3,9,20,null,null,15,7]
-> <strong>Output: [[3],[9,20],[15,7]]</strong></code></pre>
->
-> **Example 2:**
->
-> <pre><code>Input: root = [1]
-> <strong>Output: [[1]]</strong></code></pre>
->
-> **Example 3:**
->
-> <pre><code>Input: root = []
-> <strong>Output: []</strong></code></pre>
+> Insert problem statement
 
 ### Pseudocode
 
-```
+```// Some code
+
 ```
 
 ### Solution
 
-```
+```// Some code
+
 ```
 
 ### Time and Space Complexity
 
 #### Time
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -&#x20;
 
 #### Space
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -

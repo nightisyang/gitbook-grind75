@@ -4,62 +4,17 @@
 
 ### Problem
 
-> Given the `root` of a binary tree, _determine if it is a valid binary search tree (BST)_.
->
-> A **valid BST** is defined as follows:
->
-> * The left subtree of a node contains only nodes with keys **less than** the node's key.
-> * The right subtree of a node contains only nodes with keys **greater than** the node's key.
-> * Both the left and right subtrees must also be binary search trees.
->
-> &#x20;
->
-> **Example 1:**
->
-> ![](https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg)
->
-> <pre><code>Input: root = [2,1,3]
-> <strong>Output: true</strong></code></pre>
->
-> **Example 2:**
->
-> ![](https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg)
->
-> <pre><code>Input: root = [5,1,4,null,null,3,6]
-> <strong>Output: false
-> </strong><strong>Explanation: The root node's value is 5 but its right child's value is 4.</strong></code></pre>
+> Insert problem statement
 
 ### Pseudocode
 
-```
+```// Some code
+
 ```
 
 ### Solution
 
-```javascript
-var isValidBST = function (root) {
-  function walk(root, minVal, maxVal) {
-    // base condition
-    if (!root) {
-      return true;
-    }
-
-    // pre
-    if (root.val <= minVal || root.val >= maxVal) {
-      return false;
-    }
-    // recurse
-
-    // left node can't be larger than parent node
-    // right node must be larger than parent node
-    return (
-      walk(root.left, minVal, root.val) && walk(root.right, root.val, maxVal)
-    );
-    // post
-  }
-
-  return walk(root, -Infinity, Infinity);
-};
+```// Some code
 
 ```
 
@@ -67,10 +22,10 @@ var isValidBST = function (root) {
 
 #### Time
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -&#x20;
 
 #### Space
 
-* What did the code do
-* Total -
+- What did the code do
+- Total -

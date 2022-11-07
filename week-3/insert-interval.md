@@ -26,6 +26,9 @@
 ### Pseudocode
 
 ```
+- if intervals overlap, merge them with [Math.min, Math.max]
+- push intervals with smaller max values than merge min into left array
+- push intervals wither larger min values than merge max into right array
 ```
 
 ### Solution

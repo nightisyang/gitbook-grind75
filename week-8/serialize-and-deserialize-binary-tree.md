@@ -31,7 +31,28 @@
 
 ### Solution
 
-```
+```javascript
+var deserialize = function (data) {
+  const arr = JSON.parse(data);
+
+  if (!arr.length) return null;
+
+  const root = new TreeNode(arr.shift());
+  const queue = [root];
+
+  while (queue.length) {
+    let node = queue.shift(),
+      val;
+
+    node.left = (val = arr.shift()) || val === 0 ? new TreeNode(val) : null;
+    node.right = (val = arr.shift()) || val === 0 ? new TreeNode(val) : null;
+
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+
+  return root;
+};
 ```
 
 ### Time and Space Complexity

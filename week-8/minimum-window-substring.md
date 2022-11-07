@@ -37,7 +37,55 @@
 
 ### Solution
 
-```
+```javascript
+// from solutions
+// https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
+var minWindow = function (s, t) {
+  let counter = t.length;
+  let shortestSubstring = "";
+  const tMap = {};
+  let start = 0;
+  let end = 0;
+  let minStart = 0;
+  let minLen = Infinity;
+  let size = s.length;
+
+  for (let i = 0; i < t.length; i++) {
+    if (!tMap[t[i]]) {
+      tMap[t[i]] = 0;
+    }
+    tMap[t[i]] += 1;
+  }
+
+  while (end < size) {
+    if (tMap[s[end]] > 0) {
+      counter--;
+    }
+
+    tMap[s[end]]--;
+    end++;
+    console.log(tMap);
+    while (counter === 0) {
+      if (end - start < minLen) {
+        minStart = start;
+        minLen = end - start;
+      }
+
+      tMap[s[start]]++;
+      console.log(tMap);
+      if (tMap[s[start]] > 0) {
+        counter++;
+      }
+      start++;
+    }
+  }
+  console.log(tMap);
+  if (minLen !== Infinity) {
+    shortestSubstring = s.substring(minStart, minStart + minLen);
+  }
+
+  return shortestSubstring;
+};
 ```
 
 ### Time and Space Complexity

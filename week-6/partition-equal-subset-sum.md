@@ -27,7 +27,28 @@
 
 ### Solution
 
-```
+```javascript
+// from solution
+// https://leetcode.com/problems/partition-equal-subset-sum/solutions/462699/whiteboard-editorial-all-approaches-explained/
+var canPartition = (A) => {
+  let totalSum = A.reduce((acc, curr) => acc + curr);
+  if (totalSum % 2) return false;
+
+  const target = totalSum / 2;
+  const memo = new Set([0]);
+
+  for (let number of A) {
+    let possibleSums = Array.from(memo);
+    console.log(possibleSums);
+
+    for (let possibleSum of possibleSums) {
+      console.log(number);
+      memo.add(possibleSum + number);
+    }
+    console.log(memo);
+  }
+  return memo.has(target);
+};
 ```
 
 ### Time and Space Complexity

@@ -38,7 +38,34 @@
 
 ### Solution
 
-```
+```javascript
+var lowestCommonAncestor = function (root, p, q) {
+  function walk(node) {
+    // base condition
+    if (!node) {
+      return null;
+    }
+
+    if (node === p || node === q) {
+      return node;
+    }
+
+    // pre
+    // recurse
+    const walkLeft = walk(node.left);
+    const walkRight = walk(node.right);
+    // post
+
+    if (walkLeft && walkRight) {
+      return node;
+    } else {
+      return walkLeft || walkRight;
+    }
+  }
+
+  return walk(root);
+};
+
 ```
 
 ### Time and Space Complexity

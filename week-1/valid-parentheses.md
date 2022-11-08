@@ -12,10 +12,9 @@
 > 2. Open brackets must be closed in the correct order.
 > 3. Every close bracket has a corresponding open bracket of the same type.
 
-> ### Pseudocode
+### Pseudocode
 
 {% code overflow="wrap" %}
-
 ```
 usage of opening and closing parenthesis follows last in first out (LIFO), the last opening parenthesis must follow with the first corresponding closing parenthesis.
 
@@ -31,7 +30,6 @@ usage of opening and closing parenthesis follows last in first out (LIFO), the l
     - if the stack is empty, return true
     - else, return false
 ```
-
 {% endcode %}
 
 ### Solution
@@ -67,11 +65,11 @@ var isValid = function (s) {
 
 #### Time
 
-- Loops through string once to find opening and closing parenthesis
-- Lookup for corresponding parenthesis using Map is constant time
-- Total - O(N)
+* Loops through string once to find opening and closing parenthesis
+* Lookup for corresponding parenthesis using Map is constant time
+* Total - O(N)
 
 #### Space
 
-- Space complexity increases linearly with input i.e. stack length
-- Total - O(N)
+* Space complexity increases linearly with input i.e. stack length
+* Total - O(N)

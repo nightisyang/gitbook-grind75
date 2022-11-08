@@ -4,17 +4,69 @@
 
 ### Problem
 
-> Insert problem statement
+> Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+>
+> According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest\_common\_ancestor): “The lowest common ancestor is defined between two nodes `p` and `q` as the lowest node in `T` that has both `p` and `q` as descendants (where we allow **a node to be a descendant of itself**).”
+>
+> &#x20;
+>
+> **Example 1:**
+>
+> ![](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
+>
+> <pre><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+> <strong>Output: 3
+> </strong><strong>Explanation: The LCA of nodes 5 and 1 is 3.</strong></code></pre>
+>
+> **Example 2:**
+>
+> ![](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
+>
+> <pre data-overflow="wrap"><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+> <strong>Output: 5
+> </strong><strong>Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.</strong></code></pre>
+>
+> **Example 3:**
+>
+> <pre><code>Input: root = [1,2], p = 1, q = 2
+> <strong>Output: 1</strong></code></pre>
 
 ### Pseudocode
 
-```// Some code
-
+```
+-dfs to traverse BT, bfs not suitable here
+    - set up conditions to return LCA node
 ```
 
 ### Solution
 
-```// Some code
+```javascript
+var lowestCommonAncestor = function (root, p, q) {
+  function walk(node) {
+    // base condition
+    if (!node) {
+      return null;
+    }
+
+    if (node === p || node === q) {
+      return node;
+    }
+
+    // pre
+    // recurse
+    const walkLeft = walk(node.left);
+    const walkRight = walk(node.right);
+    // post
+
+    if (walkLeft && walkRight) {
+      return node;
+    } else {
+      return walkLeft || walkRight;
+    }
+  }
+
+  return walk(root);
+};
 
 ```
 
@@ -22,10 +74,10 @@
 
 #### Time
 
-- What did the code do
-- Total -&#x20;
+* What did the code do
+* Total -
 
 #### Space
 
-- What did the code do
-- Total -
+* What did the code do
+* Total -
